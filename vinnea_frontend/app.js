@@ -1,4 +1,4 @@
-const API ="http://127.0.0.1:8000";; // no slash at the end
+const API ="https://vinnea-backend-hu6y.onrender.com/";; // no slash at the end
 
 const $ = (id) => document.getElementById(id);
 const token = () => localStorage.getItem("token");
