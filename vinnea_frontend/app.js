@@ -1,4 +1,4 @@
-const API ="https://vinnea-backend-hu6y.onrender.com/";; // no slash at the end
+const API ="https://vinnea-backend-hu6y.onrender.com/";
 
 const $ = (id) => document.getElementById(id);
 const token = () => localStorage.getItem("token");
