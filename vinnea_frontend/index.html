@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vinnèa — Collect everything you love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#/">🐚 Vinnèa</a>
+    <nav id="navOut">
+      <a class="btn ghost" href="#/login">Log in</a>
+      <a class="btn" href="#/signup">Sign up</a>
+    </nav>
+    <nav id="navIn" hidden>
+      <a class="btn ghost" href="#/">Feed</a>
+      <a class="btn ghost" href="#/mine">My pins</a>
+      <button class="btn ghost" id="logoutBtn">Log out</button>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <h1>Collect everything you love</h1>
+    <p>Fresh pins from everyone. No account needed to browse.</p>
+    <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,40 L1440,80 L0,80Z" fill="#f3fbfb"/>
+    </svg>
+  </section>
+
+  <main>
+    <p id="msg" class="msg" hidden></p>
+
+    <section id="authView" hidden>
+      <div class="auth">
+        <div class="tabs">
+          <a id="tabLogin" href="#/login">Log in</a>
+          <a id="tabSignup" href="#/signup">Sign up</a>
+        </div>
+        <form id="loginForm">
+          <label>Username <input id="lUser" required autocomplete="username"></label>
+          <label>Password <input id="lPass" type="password" required autocomplete="current-password"></label>
+          <button class="btn wide">Log in</button>
+        </form>
+        <form id="signupForm" hidden>
+          <label>Username <input id="sUser" required autocomplete="username"></label>
+          <label>Email <input id="sEmail" type="email" required autocomplete="email"></label>
+          <label>Password <input id="sPass" type="password" required autocomplete="new-password"></label>
+          <label>Confirm password <input id="sPass2" type="password" required autocomplete="new-password"></label>
+          <button class="btn wide">Create account</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="feedView">
+      <h2 id="feedTitle" class="feed-title" hidden>My pins</h2>
+      <div id="grid" class="grid"></div>
+      <p id="empty" class="empty" hidden>No pins here yet. Tap + to add the first one.</p>
+    </section>
+  </main>
+
+  <button id="fab" class="fab" title="Add a pin" hidden>+</button>
+
+  <dialog id="uploadDlg">
+    <form id="uploadForm">
+      <h3>Add a pin</h3>
+      <input id="file" type="file" accept="image/*,video/*" required>
+      <input id="caption" placeholder="Write a caption">
+      <p id="upMsg" class="msg" hidden></p>
+      <div class="row">
+        <button type="button" class="btn ghost" id="cancelUp">Cancel</button>
+        <button class="btn">Post pin</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

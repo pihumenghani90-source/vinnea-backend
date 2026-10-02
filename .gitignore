@@ -4,3 +4,5 @@ __pycache__/
 app.db
 uploads/
 .DS_Store
+vinnea.db
+uploads/
